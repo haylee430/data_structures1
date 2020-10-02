@@ -14,6 +14,13 @@ def all_houses(filename):
     Return:
       - set[str]: a set of strings
     """
+    the_file = open("cohort_data.txt")
+
+    full_list = [line.rstrip() for line in the_file]
+    stripped_list=[line.split("|") for line in full_list]
+    #print(stripped_list)
+
+    print(stripped_list[0][2])
 
     houses = set()
 
